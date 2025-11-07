@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
 const data = [
-  { month: "Mar", value: 8000 },
-  { month: "Abr", value: 9500 },
-  { month: "May", value: 7000 },
-  { month: "Jun", value: 15000 },
-  { month: "Jul", value: 9000 },
-  { month: "Ago", value: 8500 },
-  { month: "Sep", value: 9500 },
-  { month: "Oct", value: 8800 },
-  { month: "Nov", value: 9100 },
+  { month: "Mar", value: 600000 },
+  { month: "Abr", value: 500500 },
+  { month: "May", value: 500000 },
+  { month: "Jun", value: 515000 },
+  { month: "Jul", value: 509000 },
+  { month: "Ago", value: 578500 },
+  { month: "Sep", value: 509500 },
+  { month: "Oct", value: 508800 },
+  { month: "Nov", value: 700000 },
 ];
 
 const MonthlyChart = () => {
