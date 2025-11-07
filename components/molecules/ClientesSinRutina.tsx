@@ -8,8 +8,8 @@ const ClientesSinRutina = () => {
   const { clientes } = useClientes();
   return (
     <>
-      <div className="w-full">
-        <h2 className="text-2xl font-semibold pb-2">Clientes sin rutinas</h2>
+     
+       
         <div className="space-y-2.5">
             {clientes &&
           clientes.map((c) => (
@@ -30,7 +30,7 @@ const ClientesSinRutina = () => {
             </>
           ))}
         </div>
-      </div>
+      
     </>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 import Card from "@/components/atoms/Card";
 import MonthlyChart from "@/components/organisms/charts/MonthlyChart";
-import ClientesSinRutina from "@/components/organisms/ClientesSinRutina";
+import ClientesDashboard from "@/components/organisms/ClientesDashboard";
 
 export default function Home() {
   const data = Array.from({ length: 30 }, () =>
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       <div className="flex w-full items-start gap-x-4">
-        <ClientesSinRutina/>
+        <ClientesDashboard/>
         <Card className="max-w-[600px]">
           <MonthlyChart />
         </Card>

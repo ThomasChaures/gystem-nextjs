@@ -25,7 +25,7 @@ export default function Button({
       <Link
         href={href || "#"}
         onClick={onClick}
-        className={`${baseStyles} bg-amber-400 hover:bg-amber-500 ${className}`}
+        className={`${baseStyles} bg-amber-300 hover:bg-amber-500 ${className}`}
       >
         {children}
       </Link>
