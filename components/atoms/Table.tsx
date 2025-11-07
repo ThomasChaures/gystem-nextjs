@@ -16,7 +16,7 @@ export default function Table<T>({
   emptyMessage = "No hay datos disponibles",
 }: TableProps<T>) {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto w-full">
       <table className="min-w-full border-separate border-spacing-y-3">
         <thead>
           <tr className="bg-[#333] text-white">

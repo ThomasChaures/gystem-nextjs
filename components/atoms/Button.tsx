@@ -1,33 +1,41 @@
 "use client";
-
+import Link from "next/link";
 import { ReactNode } from "react";
+
+interface ButtonProps {
+  children: ReactNode;
+  onClick?: () => void;
+  variant?: "default" | "link";
+  className?: string;
+  href?: string;
+}
 
 export default function Button({
   children,
   onClick,
   variant = "default",
   className = "",
-}: {
-  children: ReactNode;
-  onClick?: () => void;
-  variant?: "default" | "link";
-  className?: string;
-}) {
+  href = "",
+}: ButtonProps) {
+  const baseStyles =
+    "inline-flex items-center justify-center gap-x-2 px-5 py-2.5 rounded-md font-medium text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-300";
+
   if (variant === "link") {
     return (
-      <button
+      <Link
+        href={href || "#"}
         onClick={onClick}
-        className={`text-blue-600 hover:underline transition ${className}`}
+        className={`${baseStyles} bg-amber-400 hover:bg-amber-500 ${className}`}
       >
         {children}
-      </button>
+      </Link>
     );
   }
 
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition ${className}`}
+      className={`${baseStyles} bg-amber-400 hover:bg-amber-500 ${className}`}
     >
       {children}
     </button>
