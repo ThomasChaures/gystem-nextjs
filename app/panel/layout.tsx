@@ -1,33 +1,38 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Inter } from "next/font/google"; // 👈 importamos Outfit e Inter
 import "./globals.css";
 import { ReactNode } from "react";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import { LayoutProvider } from "@/contexts/DashboardLayoutContext";
 import { ClientesProvider } from "@/contexts/ClientesContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// 🧩 Definimos las fuentes
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
+// 🧠 Metadatos
 export const metadata: Metadata = {
   title: "Gymstem | Panel de administración",
   description: "Panel",
 };
 
+// 🧱 RootLayout
 export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.variable} ${inter.variable} font-sans antialiased`}
       >
         <ClientesProvider>
           <LayoutProvider>

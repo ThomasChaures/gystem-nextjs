@@ -1,87 +1,100 @@
 "use client";
-
+import { IconTreadmill } from "@tabler/icons-react";
 import {
-  ArrowLeftFromLine,
-  ArrowRightFromLine,
-  CircleDashed,
+  Users,
+  NotebookText,
+  BadgeQuestionMark,
+  GamepadDirectional,
+  LayoutDashboard,
+  LogOut,
 } from "lucide-react";
 import LinkSidebarDashboard from "../atoms/LinkSidebarDashboard";
 import useLayout from "@/hooks/useLayout";
 
 const DashboardSidebar = () => {
   const { openLayout, handleLayout } = useLayout();
+
   return (
     <aside
-      className={`fixed bg-black text-white top-0 transition-all px-4  h-screen ${
-        openLayout ? "w-[300px]" : "w-20"
-      } overflow-hidden`}
+      onMouseEnter={() => handleLayout(true)}
+      onMouseLeave={() => handleLayout(false)}
+      className={`fixed left-10 top-1/2 -translate-y-1/2 rounded-2xl border border-[#EBEBEA] text-black
+        bg-white backdrop-blur-md shadow-lg overflow-hidden 
+        transition-[width,transform,background-color] duration-500 ease-in-out 
+        h-[92vh] flex flex-col justify-between
+        ${openLayout ? "w-[300px]" : "w-[90px]"}`}
     >
-      <div
-        className={`absolute transition-all  top-3 ${
-          openLayout ? "left-65" : "left-1/2 transform translate-[-50%] top-6"
-        }`}
-      >
-        {openLayout ? (
-          <ArrowLeftFromLine
-            size={20}
-            className="cursor-pointer"
-            onClick={() => {
-              handleLayout(false);
-            }}
+      {/* Contenido superior */}
+      <div>
+        {/* Logo */}
+        <div
+          className={`
+            flex items-center justify-center w-full pb-8 mt-16
+            transition-all duration-500 ease-in-out
+            ${openLayout ? "px-10" : "px-0"}
+          `}
+        >
+          <GamepadDirectional
+            size={40}
+            fill="#333"
+            className="text-[#333] transition-transform duration-500 ease-in-out"
           />
-        ) : (
-          <ArrowRightFromLine
-            size={20}
-            className="cursor-pointer"
-            onClick={() => handleLayout(true)}
-          />
-        )}
+        </div>
+
+        {/* Navegación principal */}
+        <nav className="mt-8 w-full">
+          <ul
+            className={`${
+              openLayout ? "px-10" : ""
+            } w-full items-start space-y-4`}
+          >
+            <LinkSidebarDashboard
+              icon={LayoutDashboard}
+              route="/panel"
+              name="Panel"
+            />
+            <LinkSidebarDashboard
+              icon={Users}
+              route="/panel/clientes"
+              name="Clientes"
+            />
+            <LinkSidebarDashboard
+              icon={IconTreadmill}
+              route="/panel/ejercicios"
+              name="Ejercicios"
+            />
+            <LinkSidebarDashboard
+              icon={NotebookText}
+              route="/panel/rutinas"
+              name="Rutinas"
+            />
+          </ul>
+        </nav>
       </div>
-      <div
-        className={`${
-          openLayout ? "px-10" : "justify-center"
-        } transition-all mt-17  pb-8  flex items-center  gap-x-2.5   w-full`}
-      >
-        <CircleDashed size={30} />
-        <h1
-          className={`${
-            openLayout ? "px-2" : "sr-only"
-          } text-2xl font-semibold`}
-        >
-          MiGystem
-        </h1>
+
+      {/* Contenido inferior */}
+      <div>
+        <div className="border-t border-[#333]/20 mx-3 mb-5" />
+        <nav className="pb-5 w-full">
+          <ul
+            className={`${
+              openLayout ? "px-10" : ""
+            } w-full items-start space-y-4`}
+          >
+            <LinkSidebarDashboard
+              name="Ayuda"
+              route="/ayuda"
+              icon={BadgeQuestionMark}
+            />
+
+            <LinkSidebarDashboard
+              name="Cerrar sesión"
+              route="/logout"
+              icon={LogOut}
+            />
+          </ul>
+        </nav>
       </div>
-      <nav className="mt-8 w-full">
-        <ul
-          className={`${
-            openLayout ? "px-10" : ""
-          } w-full items-start space-y-4`}
-        >
-          <LinkSidebarDashboard route="/panel" name="Panel">
-            <CircleDashed />
-          </LinkSidebarDashboard>
-          <LinkSidebarDashboard name="Clientes" route="/panel/clientes">
-            <CircleDashed />
-          </LinkSidebarDashboard>
-          <LinkSidebarDashboard name="Ejercicios" route="/panel/ejercicios">
-            <CircleDashed />
-          </LinkSidebarDashboard>
-          <LinkSidebarDashboard name="Rutinas" route="/panel/rutinas">
-            <CircleDashed />
-          </LinkSidebarDashboard>
-        </ul>
-      </nav>
-      <nav className="pt-8 mt-8  pb-5  w-full ">
-        <ul
-          className={`${
-            openLayout ? "px-10" : ""
-          } w-full items-start space-y-4`}
-        >
-          <LinkSidebarDashboard name="Ayuda" route="/ayuda">
-            <CircleDashed />
-          </LinkSidebarDashboard>
-        </ul>
-      </nav>
     </aside>
   );
 };

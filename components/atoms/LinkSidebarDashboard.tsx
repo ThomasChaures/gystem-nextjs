@@ -1,26 +1,54 @@
-import React, { ReactNode } from "react";
+"use client";
+import React from "react";
+import { usePathname } from "next/navigation";
 import useLayout from "@/hooks/useLayout";
 
-const LinkSidebarDashboard = ({
-  children,
-  route,
-  name,
-}: {
-  children: ReactNode;
+interface LinkSidebarDashboardProps {
+  icon: React.ElementType;
   route: string;
   name: string;
-}) => {
+}
+
+const LinkSidebarDashboard = ({ icon: Icon, route, name }: LinkSidebarDashboardProps) => {
   const { openLayout } = useLayout();
+  const pathname = usePathname();
+  const isActive = pathname === route;
+
   return (
-    <li className="w-full">
+    <li className={`w-full ${openLayout ? "" : "px-4"}`}>
       <a
-        className={`w-full px-2 transition-all flex gap-4 rounded-xl ${
-          openLayout ? "" : "items-center justify-center"
-        } hover:bg-white py-2 hover:text-black`}
         href={route}
+        className={`
+          group flex w-full items-center py-2 rounded-xl transition-all duration-300 ease-in-out
+          ${openLayout ? "justify-start px-6 gap-4" : "justify-center px-4 gap-0"}
+          ${
+            isActive
+              ? "bg-[#333] text-white"
+              : "text-[#333] hover:bg-[#333] hover:text-white"
+          }
+        `}
       >
-        {children}
-        <p className={`text-base ${openLayout ? "" : "hidden"}`}>{name}</p>
+        <Icon
+          size={22}
+          stroke={1.6}
+          className={`
+            transition-all duration-300
+            ${isActive ? "stroke-white fill-white" : "stroke-[#333]"}
+            group-hover:stroke-white
+          `}
+        />
+
+        <p
+          className={`
+            text-base whitespace-nowrap
+            transition-all duration-300 ease-in-out
+            ${openLayout
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-2 w-0 overflow-hidden"}
+          `}
+        >
+          {name}
+        </p>
       </a>
     </li>
   );

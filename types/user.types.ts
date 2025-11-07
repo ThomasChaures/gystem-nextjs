@@ -6,4 +6,6 @@ export interface Cliente{
     email?: string;
     adeudado: boolean;
     rutina: boolean;
+    plan?: string;
+    fecha_de_pago?: string;
 }

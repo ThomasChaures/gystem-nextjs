@@ -16,10 +16,10 @@ export default function Table<T>({
   emptyMessage = "No hay datos disponibles",
 }: TableProps<T>) {
   return (
-    <div className="overflow-x-auto bg-white">
+    <div className="overflow-x-auto">
       <table className="min-w-full border-separate border-spacing-y-3">
         <thead>
-          <tr className="bg-black text-white">
+          <tr className="bg-[#333] text-white">
             {headers.map((header, i) => (
               <th
                 key={header}

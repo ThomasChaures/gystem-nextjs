@@ -32,7 +32,7 @@ export default function TableCell({
       : "";
 
   return (
-    <td className={`p-3 bg-gray-100 ${alignment} ${radius} ${className}`}>
+    <td className={`p-3 bg-white ${alignment} ${radius} ${className}`}>
       {children}
     </td>
   );

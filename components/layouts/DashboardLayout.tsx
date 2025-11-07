@@ -1,19 +1,25 @@
 "use client";
 
-import { ReactNode } from "react"
-import useLayout from "@/hooks/useLayout"
-import DashboardSidebar from "../organisms/DashboardSidebar"
+import { ReactNode } from "react";
+import useLayout from "@/hooks/useLayout";
+import DashboardSidebar from "../organisms/DashboardSidebar";
 
-const DashboardLayout = ({children}:{children: ReactNode}) => {
-    const {openLayout} = useLayout();
+const DashboardLayout = ({ children }: { children: ReactNode }) => {
+  const { openLayout } = useLayout();
+
   return (
     <>
-        <DashboardSidebar />
-        <main className={`bg-white ${openLayout ? 'ml-[300px]' : 'ml-20'} mr-5 p-10 my-4 transition-all border rounded-xl border-[#D1D1D1] min-h-[95.5vh]`}>
-            {children}
-        </main>
+      <DashboardSidebar />
+      <main
+        className={`
+          bg-[#FAFAFA] h-screen rounded-xl p-10 transition-[margin,width] duration-500 ease-in-out
+          ${openLayout ? "ml-[340px] w-[calc(100%-360px)]" : "ml-[120px] w-[calc(100%-140px)]"}
+        `}
+      >
+        {children}
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default DashboardLayout
+export default DashboardLayout;

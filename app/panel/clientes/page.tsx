@@ -25,7 +25,7 @@ export default function ClientesPage() {
       </div>
 
       {/* Buscador */}
-      <div className="flex items-end justify-between">
+      <div className="flex items-end mb-4 justify-between">
         <div className="relative">
           <Search className="absolute top-1/2 transform -translate-y-1/2 left-3 text-gray-500" />
           <input
