@@ -66,7 +66,7 @@ const DashboardSidebar = () => {
           <LinkSidebarDashboard name="Ejercicios" route="/panel/ejercicios">
             <CircleDashed />
           </LinkSidebarDashboard>
-          <LinkSidebarDashboard name="Rutinas" route="/rutinas">
+          <LinkSidebarDashboard name="Rutinas" route="/panel/rutinas">
             <CircleDashed />
           </LinkSidebarDashboard>
         </ul>
