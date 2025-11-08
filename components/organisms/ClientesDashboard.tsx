@@ -7,7 +7,7 @@ const ClientesDashboard = () => {
   return (
     <>
       <div className="w-full h-40">
-        <div className="flex items-center w-full justify-between pb-2">
+        <div className="flex items-center w-full justify-between pb-4">
           <h2 className="text-2xl font-semibold ">Clientes</h2>
 
           <div className="space-x-2.5 flex items-center">

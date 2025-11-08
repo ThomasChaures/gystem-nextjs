@@ -3,6 +3,8 @@
 import { ReactNode } from "react";
 import useLayout from "@/hooks/useLayout";
 import DashboardSidebar from "../organisms/DashboardSidebar";
+import HeaderDashboard from "../organisms/HeaderDashboard";
+
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const { openLayout } = useLayout();
@@ -10,6 +12,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <DashboardSidebar />
+      <HeaderDashboard />
       <main
         className={`
           bg-[#FAFAFA] h-screen rounded-xl p-10 transition-[margin,width] duration-500 ease-in-out
