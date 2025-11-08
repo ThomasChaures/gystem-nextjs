@@ -18,7 +18,7 @@ export default function Button({
   href = "",
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-x-2 px-5 py-2.5 rounded-md font-medium text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-300";
+    "inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-md font-medium text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-300";
 
   if (variant === "link") {
     return (

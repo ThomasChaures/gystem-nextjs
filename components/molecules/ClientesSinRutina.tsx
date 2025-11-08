@@ -14,7 +14,7 @@ const ClientesSinRutina = () => {
             {clientes &&
           clientes.map((c) => (
             <>
-              <Card className="w-full flex p-5! items-center justify-between">
+              <Card className="w-full flex p-3! items-center justify-between">
                 <div className="flex items-center gap-x-4">
                   <div className="bg-[#333] h-10 w-10 rounded-xl flex items-center justify-center">
                     <User color="transparent" fill="white" size={30} />

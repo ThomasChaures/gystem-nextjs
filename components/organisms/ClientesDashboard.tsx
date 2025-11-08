@@ -6,7 +6,7 @@ import Toogle from "../atoms/Toogle";
 const ClientesDashboard = () => {
   return (
     <>
-      <div className="w-full">
+      <div className="w-full h-40">
         <div className="flex items-center w-full justify-between pb-2">
           <h2 className="text-2xl font-semibold ">Clientes</h2>
 

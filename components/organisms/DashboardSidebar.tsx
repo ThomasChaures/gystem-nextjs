@@ -7,6 +7,7 @@ import {
   GamepadDirectional,
   LayoutDashboard,
   LogOut,
+  Wallet
 } from "lucide-react";
 import LinkSidebarDashboard from "../atoms/LinkSidebarDashboard";
 import useLayout from "@/hooks/useLayout";
@@ -67,6 +68,11 @@ const DashboardSidebar = () => {
               icon={NotebookText}
               route="/panel/rutinas"
               name="Rutinas"
+            />
+            <LinkSidebarDashboard
+              icon={Wallet}
+              route="/panel/caja"
+              name="Caja"
             />
           </ul>
         </nav>
