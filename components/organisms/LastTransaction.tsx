@@ -32,9 +32,7 @@ export default function LastTransactions() {
     <div className=" rounded-3xl   flex flex-col justify-between h-full">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-gray-700 font-semibold text-[15px]">
-          Últimas transacciones
-        </h2>
+        <h2 className=" font-semibold ">Últimas transacciones</h2>
         <button className="text-amber-500 text-sm font-medium hover:underline">
           Ver todas
         </button>
@@ -45,34 +43,39 @@ export default function LastTransactions() {
         {transactions.map((t) => (
           <div
             key={t.id}
-            className="flex items-center justify-between border-b border-[#333]/20 last:border-b-0 py-4 last:pb-0"
+            className="flex items-center justify-between py-4 border-b border-gray-200 last:border-b-0 last:pb-0"
           >
             <div className="flex items-center gap-x-3">
+              {/* Icono circular */}
               <div
-                className={`w-6 h-6 flex items-center justify-center rounded-full ${
+                className={`w-8 h-8 flex items-center justify-center rounded-xl ${
                   t.type === "income"
-                    ? "bg-amber-100 text-amber-600"
-                    : "bg-red-100 text-red-600"
+                    ? "bg-amber-50 text-amber-500"
+                    : "bg-red-50 text-red-500"
                 }`}
               >
                 {t.type === "income" ? (
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-4 h-4" />
                 ) : (
-                  <ArrowDownRight className="w-3.5 h-3.5" />
+                  <ArrowDownRight className="w-4 h-4" />
                 )}
               </div>
-              <div>
-                <p className="text-[14px] font-medium text-gray-800 leading-tight">
+
+              {/* Info transacción */}
+              <div className="flex flex-col">
+                <p className="text-[15px] font-medium text-gray-800 tracking-tight">
                   {t.name}
                 </p>
-                <p className="text-[13px] text-gray-500">
+                <p className="text-[13px] text-gray-500 leading-tight">
                   {t.method} · {t.date}
                 </p>
               </div>
             </div>
+
+            {/* Monto */}
             <p
-              className={`text-[14px] font-semibold ${
-                t.type === "income" ? "text-green-600" : "text-red-600"
+              className={`text-[15px] font-semibold ${
+                t.type === "income" ? "text-green-600" : "text-red-500"
               }`}
             >
               {t.type === "income"

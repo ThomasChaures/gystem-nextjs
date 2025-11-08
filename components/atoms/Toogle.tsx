@@ -1,9 +1,25 @@
 import React from "react";
 
-const Toogle = ({ name, click, active }: { name: string; click?: () => void , active?: boolean}) => {
-  return <span
-    className={`px-2 py-1  inline-block border border-[#333]/70 rounded-full cursor-pointer ${active ? "bg-[#333] text-white" : ''}`}
-  onClick={click}>{name}</span>;
+interface ToggleProps {
+  name: string;
+  click?: () => void;
+  active?: boolean;
+}
+
+const Toogle: React.FC<ToggleProps> = ({ name, click, active }) => {
+  return (
+    <button
+      onClick={click}
+      className={`
+        px-3 py-1.5 rounded-full border text-sm font-medium cursor-pointer transition-all duration-200
+        ${active
+          ? "bg-[#333] text-white border-[#333]"
+          : "border-gray-300 text-gray-700 hover:bg-gray-50"}
+      `}
+    >
+      {name}
+    </button>
+  );
 };
 
 export default Toogle;

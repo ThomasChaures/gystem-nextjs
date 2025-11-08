@@ -3,6 +3,7 @@ import Card from "@/components/atoms/Card";
 import MonthlyChart from "@/components/organisms/charts/MonthlyChart";
 import ClientesDashboard from "@/components/organisms/ClientesDashboard";
 import LastTransactions from "@/components/organisms/LastTransaction";
+import SubGymPrice from "@/components/organisms/SubGymPrice";
 
 export default function Home() {
   const data = Array.from({ length: 30 }, () =>
@@ -85,12 +86,15 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-          <Card className="h-full">
+        <div className="flex gap-6 h-105 mt-8">
+          <Card className="h-full max-w-[600px]">
             <MonthlyChart />
           </Card>
-          <Card className="h-full">
+          <Card className="h-105">
             <LastTransactions />
+          </Card>
+          <Card className="w-full">
+            <SubGymPrice />
           </Card>
         </div>
       </section>

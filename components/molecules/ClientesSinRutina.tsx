@@ -22,8 +22,8 @@ const ClientesSinRutina = () => {
                   {c.nombre} {c.apellido}
                 </div>
 
-                <Button variant="link">
-                  <Plus />
+                <Button variant="link" className="text-[14px]">
+                  <Plus size={20} />
                   Agregar rutina
                 </Button>
               </Card>
