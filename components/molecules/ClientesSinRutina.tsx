@@ -14,7 +14,7 @@ const ClientesSinRutina = () => {
             {clientes &&
           clientes.map((c) => (
             <>
-              <Card className="w-full flex p-3! items-center justify-between">
+              <Card className="w-full flex p-3! max-sm:p-2! items-center justify-between">
                 <div className="flex items-center gap-x-4">
                   <div className="bg-[#333] h-10 w-10 rounded-xl flex items-center justify-center">
                     <User color="transparent" fill="white" size={30} />
@@ -22,9 +22,9 @@ const ClientesSinRutina = () => {
                   {c.nombre} {c.apellido}
                 </div>
 
-                <Button variant="link" className="text-[14px]">
+                <Button variant="link" className="max-sm:p-2 text-[14px]">
                   <Plus size={20} />
-                  Agregar rutina
+                  <span className="max-sm:hidden">Agregar rutina</span>
                 </Button>
               </Card>
             </>

@@ -19,7 +19,7 @@ const DashboardSidebar = () => {
     <aside
       onMouseEnter={() => handleLayout(true)}
       onMouseLeave={() => handleLayout(false)}
-      className={`fixed left-10 top-1/2 -translate-y-1/2 rounded-2xl border border-[#EBEBEA] text-black
+      className={`fixed max-md:hidden left-10 top-1/2 -translate-y-1/2 rounded-2xl border border-[#EBEBEA] text-black
         bg-white backdrop-blur-md shadow-lg overflow-hidden 
         transition-[width,transform,background-color] duration-500 ease-in-out 
         h-[92vh] flex flex-col justify-between

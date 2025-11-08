@@ -29,9 +29,9 @@ export default function LastTransactions() {
   ];
 
   return (
-    <div className=" rounded-3xl   flex flex-col justify-between h-full">
+    <div className=" rounded-3xl  w-full  flex flex-col justify-between h-full">
       {/* Header */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex w-full justify-between items-center mb-4">
         <h2 className=" font-semibold ">Últimas transacciones</h2>
         <button className="text-amber-500 text-sm font-medium hover:underline">
           Ver todas
@@ -39,11 +39,11 @@ export default function LastTransactions() {
       </div>
 
       {/* Transactions list */}
-      <div className="space-y-3">
+      <div className="space-y-3 w-full">
         {transactions.map((t) => (
           <div
             key={t.id}
-            className="flex items-center justify-between py-4 border-b border-gray-200 last:border-b-0 last:pb-0"
+            className="flex items-center w-full justify-between py-4 border-b border-gray-200 last:border-b-0 last:pb-0"
           >
             <div className="flex items-center gap-x-3">
               {/* Icono circular */}
@@ -62,7 +62,7 @@ export default function LastTransactions() {
               </div>
 
               {/* Info transacción */}
-              <div className="flex flex-col">
+              <div className="flex w-full flex-col">
                 <p className="text-[15px] font-medium text-gray-800 tracking-tight">
                   {t.name}
                 </p>

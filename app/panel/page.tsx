@@ -14,88 +14,97 @@ export default function Home() {
   );
   return (
     <>
-      <section>
+      <section className="w-full">
         <h1 className="text-3xl mt-8 mb-8 font-semibold">Dashboard</h1>
 
-        <div className="flex items-center gap-x-4 mb-4 w-full justify-between">
-          <Card className="w-full flex  justify-between items-center h-40">
-            {/* Título */}
-            <div>
-              <p className="text-sm mb-8 text-gray-500 font-semibold">
-                Clientes actuales
-              </p>
-              <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
-                60
-                <span className="text-lg text-gray-500 font-normal ml-1">
-                  personas
-                </span>
-              </h2>
-            </div>
+        <div className="flex max-lg:flex-col gap-4 items-center gap-x-4 mb-4 w-full justify-between">
+          <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 justify-between w-full">
+            <Card className="w-full flex  justify-between items-center h-40">
+              {/* Título */}
+              <div className="w-full">
+                <p className="text-sm mb-8 text-gray-500 font-semibold">
+                  Clientes actuales
+                </p>
+                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                  60
+                  <span className="text-lg text-gray-500 font-normal ml-1">
+                    personas
+                  </span>
+                </h2>
+              </div>
 
-            {/* Línea inferior o descripción opcional */}
-          </Card>
-          <Card className="w-full flex  justify-between items-center h-40">
-            {/* Título */}
-            <div>
-              <p className="text-sm mb-8 text-gray-500 font-semibold">
-                Clientes nuevos
-              </p>
-              <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
-                3
-                <span className="text-lg text-gray-500 font-normal ml-1">
-                  personas
-                </span>
-              </h2>
-            </div>
+              {/* Línea inferior o descripción opcional */}
+            </Card>
+            <Card className="w-full flex  justify-between items-center h-40">
+              {/* Título */}
+              <div>
+                <p className="text-sm mb-8 text-gray-500 font-semibold">
+                  Clientes nuevos
+                </p>
+                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                  3
+                  <span className="text-lg text-gray-500 font-normal ml-1">
+                    personas
+                  </span>
+                </h2>
+              </div>
 
-            {/* Métrica principal */}
+              {/* Métrica principal */}
 
-            {/* Línea inferior o descripción opcional */}
-          </Card>
-          <Card className="w-full flex  justify-between items-center h-40">
-            {/* Título */}
-            <div>
-              <p className="text-sm mb-8 text-gray-500 font-semibold">
-                Rutinas
-              </p>
-              <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
-                48
-                <span className="text-lg text-gray-500 font-normal ml-1"></span>
-              </h2>
-            </div>
+              {/* Línea inferior o descripción opcional */}
+            </Card>
+          </div>
+          <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 justify-between w-full">
+            <Card className="w-full flex  justify-between items-center h-40">
+              {/* Título */}
+              <div>
+                <p className="text-sm mb-8 text-gray-500 font-semibold">
+                  Rutinas
+                </p>
+                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                  48
+                  <span className="text-lg text-gray-500 font-normal ml-1"></span>
+                </h2>
+              </div>
 
-            {/* Métrica principal */}
+              {/* Métrica principal */}
 
-            {/* Línea inferior o descripción opcional */}
-          </Card>
-          <Card className="w-full flex  justify-between items-center h-40">
-            {/* Título */}
-            <div>
-              <p className="text-sm mb-8 text-gray-500 font-semibold">
-                Ingresos de este mes
-              </p>
-              <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
-                $700.000
-                <span className="text-lg text-gray-500 font-normal ml-1"></span>
-              </h2>
-            </div>
+              {/* Línea inferior o descripción opcional */}
+            </Card>
+            <Card className="w-full flex  justify-between items-center h-40">
+              {/* Título */}
+              <div>
+                <p className="text-sm mb-8 text-gray-500 font-semibold">
+                  Ingresos de este mes
+                </p>
+                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                  $700.000
+                  <span className="text-lg text-gray-500 font-normal ml-1"></span>
+                </h2>
+              </div>
 
-            {/* Métrica principal */}
+              {/* Métrica principal */}
 
-            {/* Línea inferior o descripción opcional */}
-          </Card>
+              {/* Línea inferior o descripción opcional */}
+            </Card>
+          </div>
         </div>
 
-        <div className="flex gap-6 h-105 mt-8">
-          <Card className="h-full max-w-[600px]">
-            <MonthlyChart />
-          </Card>
-          <Card className="h-105">
-            <LastTransactions />
-          </Card>
-          <Card className="w-full">
-            <SubGymPrice />
-          </Card>
+        <div className="flex-col  mt-8">
+          <div className="w-full mb-8  max-xl:flex-col flex items-center gap-6">
+
+            <Card className="h-105 xl:max-w-[600px]">
+              <MonthlyChart />
+            </Card>
+            <Card className="h-105 w-full">
+              <LastTransactions />
+            </Card>
+          </div>
+          <div className=" w-full">
+            <Card className="h-full">
+              <SubGymPrice />
+            </Card>
+          </div>
         </div>
       </section>
 

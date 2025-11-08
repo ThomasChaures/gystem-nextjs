@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import useLayout from "@/hooks/useLayout";
 import DashboardSidebar from "../organisms/DashboardSidebar";
 import HeaderDashboard from "../organisms/HeaderDashboard";
+import DashboardSidebarMobile from "../organisms/DashboardSidebarMobile";
 
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
@@ -12,11 +13,12 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <DashboardSidebar />
+      <DashboardSidebarMobile />
       <HeaderDashboard />
       <main
         className={`
-          bg-[#FAFAFA] h-screen rounded-xl p-10 transition-[margin,width] duration-500 ease-in-out
-          ${openLayout ? "ml-[340px] w-[calc(100%-360px)]" : "ml-[120px] w-[calc(100%-140px)]"}
+          bg-[#FAFAFA] h-screen rounded-xl p-10 max-md:mt-10 transition-[margin,width] duration-500 ease-in-out
+          ${openLayout ? "md:ml-[340px] md:w-[calc(100%-360px)]" : "md:ml-[120px] md:w-[calc(100%-140px)]"}
         `}
       >
         {children}
