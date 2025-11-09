@@ -25,12 +25,12 @@ export default function Home() {
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Clientes actuales
                 </p>
-                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                <p className="text-4xl font-semibold text-gray-900 tracking-tight">
                   60
                   <span className="text-lg text-gray-500 font-normal ml-1">
                     personas
                   </span>
-                </h2>
+                </p>
               </div>
 
               {/* Línea inferior o descripción opcional */}
@@ -41,12 +41,12 @@ export default function Home() {
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Clientes nuevos
                 </p>
-                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                <p className="text-4xl font-semibold text-gray-900 tracking-tight">
                   3
                   <span className="text-lg text-gray-500 font-normal ml-1">
                     personas
                   </span>
-                </h2>
+                </p>
               </div>
 
               {/* Métrica principal */}
@@ -61,10 +61,10 @@ export default function Home() {
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Rutinas
                 </p>
-                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                <p className="text-4xl font-semibold text-gray-900 tracking-tight">
                   48
                   <span className="text-lg text-gray-500 font-normal ml-1"></span>
-                </h2>
+                </p>
               </div>
 
               {/* Métrica principal */}
@@ -77,10 +77,10 @@ export default function Home() {
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Ingresos de este mes
                 </p>
-                <h2 className="text-4xl font-semibold text-gray-900 tracking-tight">
+                <p className="text-4xl font-semibold text-gray-900 tracking-tight">
                   $700.000
                   <span className="text-lg text-gray-500 font-normal ml-1"></span>
-                </h2>
+                </p>
               </div>
 
               {/* Métrica principal */}
