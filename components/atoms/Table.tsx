@@ -17,15 +17,20 @@ export default function Table<T>({
 }: TableProps<T>) {
   return (
     <div className="overflow-x-auto w-full">
-      <table className="min-w-full border-separate border-spacing-y-3">
+      {/* 👇 Cambiamos a table-fixed y border-collapse para evitar espacios raros */}
+      <table className="w-full table-fixed border-collaps  border-separate border-spacing-y-3">
         <thead>
           <tr className="bg-[#333] text-white">
             {headers.map((header, i) => (
               <th
                 key={header}
-                className={`p-3 font-semibold text-left ${
-                  i === 0 ? "rounded-l-lg" : ""
-                } ${i === headers.length - 1 ? "rounded-r-lg" : ""}`}
+                className={`p-3 font-semibold ${
+                  i === 0 ? "rounded-l-lg text-left" : ""
+                } ${
+                  i === headers.length - 1
+                    ? "rounded-r-lg text-left"
+                    : "text-left"
+                }`}
               >
                 {header}
               </th>
