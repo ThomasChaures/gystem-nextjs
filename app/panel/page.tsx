@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <section className="w-full">
-        <h1 className="text-3xl mt-8 mb-8 font-semibold">Dashboard</h1>
+        <h1 className="text-3xl mt-8 mb-8 font-semibold">Panel</h1>
 
         <div className="flex max-lg:flex-col gap-4 items-center gap-x-4 mb-4 w-full justify-between">
           <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 justify-between w-full">
