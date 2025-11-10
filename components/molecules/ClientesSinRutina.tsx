@@ -1,33 +1,19 @@
 import React from "react";
 import type { Cliente } from "@/types/user.types";
 import Card from "../atoms/Card";
-import useClientes from "@/hooks/useClientes";
 import Button from "../atoms/Button";
 import { Plus } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const ClientesSinRutina = () => {
-  const { clientes } = useClientes();
-
-  const [sinRutinas, setSinRutinas] = useState<Cliente[]>([]);
-
-  const filterClientes = () => {
-    const clients = clientes.filter((c) => !c.rutina);
-    setSinRutinas(clients);
-  };
-
-  useEffect(() => {
-    filterClientes();
-  }, [clientes]);
-
+const ClientesSinRutina = ({ data }: { data: Cliente[] }) => {
   return (
     <>
       <div className="space-y-2.5">
-        {sinRutinas &&
-          sinRutinas.map((c) => (
+        {data &&
+          data.map((c) => (
             <>
-              <Card className="w-full flex p-3! max-sm:p-2! items-center justify-between">
+              <Card key={c.id} className="w-full flex p-3! max-sm:p-2! items-center justify-between">
                 <div className="flex items-center gap-x-4">
                   <div className=" h-10 w-10 rounded-xl flex items-center justify-center">
                     <Image

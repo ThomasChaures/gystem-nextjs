@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 
 import ClientesSinRutina from "../molecules/ClientesSinRutina";
 import ClientesAdeudados from "../molecules/ClientesAdeudados";
+import useClientes from "@/hooks/useClientes";
 import Toogle from "../atoms/Toogle";
 
 const ClientesDashboard = () => {
   const [selected, setSelected] = useState<boolean>(false);
+  const { clientes } = useClientes();
+
+  const adeudados = clientes.filter((c) => c.adeudado);
+  const sinRutina = clientes.filter((c) => !c.rutina);
 
   return (
     <div className="w-full pb-8">
@@ -26,7 +31,7 @@ const ClientesDashboard = () => {
         </div>
       </div>
 
-      {selected ? <ClientesAdeudados /> : <ClientesSinRutina />}
+      {selected ? <ClientesAdeudados data={adeudados} /> : <ClientesSinRutina data={sinRutina} />}
     </div>
   );
 };
