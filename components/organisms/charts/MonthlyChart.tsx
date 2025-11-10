@@ -60,7 +60,7 @@ const MonthlyChart = () => {
               <div
                 className={`transition-all duration-300 w-full rounded-md ${
                   isActive
-                    ? "bg-amber-400 shadow-2xl shadow-amber-400"
+                    ? "bg-[#0046FB] shadow-2xl shadow-[#0046FB]"
                     : "bg-gray-300"
                 }`}
                 style={{ height: `${height}%`, minHeight: "10px" }}

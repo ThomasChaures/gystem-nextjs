@@ -40,7 +40,7 @@ export default function ClientesTable() {
       data={clientes}
       renderRow={(user) => (
         <TableRow key={user.id}>
-          <TableCell rounded first>
+          <TableCell first>
             {user.nombre} {user.apellido}
           </TableCell>
           <TableCell>{user.dni}</TableCell>
@@ -56,9 +56,11 @@ export default function ClientesTable() {
               </span>
             )}
           </TableCell>
-          <TableCell rounded last align="left">
+          <TableCell last align="left">
             <div className="w-full flex items-center justify-end">
-               <EllipsisVertical size={20} />
+              <div className="h-10 w-10 bg-gray-300/20 rounded-xl flex items-center justify-center">
+                 <EllipsisVertical size={20} />
+              </div>
             </div>
             {/* <div className="w-full flex items-center gap-x-3">
               {user.rutina ? (

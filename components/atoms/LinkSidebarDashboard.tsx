@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import useLayout from "@/hooks/useLayout";
 
@@ -9,38 +10,46 @@ interface LinkSidebarDashboardProps {
   name: string;
 }
 
-const LinkSidebarDashboard = ({ icon: Icon, route, name }: LinkSidebarDashboardProps) => {
+const LinkSidebarDashboard = ({
+  icon: Icon,
+  route,
+  name,
+}: LinkSidebarDashboardProps) => {
   const { openLayout } = useLayout();
   const pathname = usePathname();
   const isActive = pathname === route;
 
   return (
     <li className={`w-full ${openLayout ? "" : "px-4"}`}>
-      <a
+      <Link
         href={route}
         className={`
           group flex w-full items-center py-2 rounded-xl transition-all duration-300 ease-in-out
-          ${openLayout ? "justify-start px-6 gap-4" : "justify-center px-4 gap-0"}
+          ${openLayout ? "justify-start px-6 gap-4" : "justify-center px-4"}
           ${
             isActive
-              ? "bg-[#333] text-white"
-              : "text-[#333] hover:bg-[#333] hover:text-white"
+              ? "bg-white text-[#0046FB]"
+              : "text-white hover:bg-white/20"
           }
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50
         `}
+        aria-current={isActive ? "page" : undefined}
       >
         <Icon
           size={22}
-          stroke={1.6}
-          className={`
-            transition-all duration-300
-            ${isActive ? "stroke-white fill-white" : "stroke-[#333]"}
-            group-hover:stroke-white
+          stroke={1.8}
+          className={`transition-all duration-300
+            ${
+              isActive
+                ? "stroke-[#0046FB] fill-[#0046FB]"
+                : "stroke-white group-hover:stroke-white"
+            }
           `}
         />
 
-        <p
+        <span
           className={`
-            text-base whitespace-nowrap
+            text-base font-medium whitespace-nowrap
             transition-all duration-300 ease-in-out
             ${openLayout
               ? "opacity-100 translate-x-0"
@@ -48,8 +57,8 @@ const LinkSidebarDashboard = ({ icon: Icon, route, name }: LinkSidebarDashboardP
           `}
         >
           {name}
-        </p>
-      </a>
+        </span>
+      </Link>
     </li>
   );
 };

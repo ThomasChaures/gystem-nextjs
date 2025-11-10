@@ -18,7 +18,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
       <main
         className={`
           bg-[#FAFAFA] h-screen rounded-xl p-6 md:p-10 max-md:mt-10 transition-[margin,width] duration-500 ease-in-out
-          ${openLayout ? "md:ml-[340px] md:w-[calc(100%-360px)]" : "md:ml-[120px] md:w-[calc(100%-140px)]"}
+          ${openLayout ? "md:ml-[350px] md:w-[calc(100%-360px)]" : "md:ml-[130px] md:w-[calc(100%-140px)]"}
         `}
       >
         {children}
