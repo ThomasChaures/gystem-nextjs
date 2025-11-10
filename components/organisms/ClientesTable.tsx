@@ -5,7 +5,15 @@ import TableRow from "../atoms/TableRow";
 import TableCell from "../atoms/TableCell";
 import Button from "../atoms/Button";
 import useClientes from "@/hooks/useClientes";
-import { Eye, Pencil, Trash2, Plus, CircleX, CircleCheck } from "lucide-react";
+import {
+  Eye,
+  Pencil,
+  Trash2,
+  Plus,
+  CircleX,
+  CircleCheck,
+  EllipsisVertical,
+} from "lucide-react";
 
 const users = [
   {
@@ -28,7 +36,7 @@ export default function ClientesTable() {
   const { clientes } = useClientes();
   return (
     <Table
-      headers={["Nombre", "DNI", "Rutina", "Estado", "Acciones"]}
+      headers={["Nombre", "DNI", "Rutina", "Estado", ""]}
       data={clientes}
       renderRow={(user) => (
         <TableRow key={user.id}>
@@ -39,13 +47,20 @@ export default function ClientesTable() {
           <TableCell>{user.rutina ? <CircleCheck /> : <CircleX />}</TableCell>
           <TableCell>
             {user.adeudado ? (
-              <span className="text-red-600 font-medium"><CircleX /></span>
+              <span className="text-red-600 font-medium">
+                <CircleX />
+              </span>
             ) : (
-              <span className="text-green-600 font-medium"><CircleCheck /></span>
+              <span className="text-green-600 font-medium">
+                <CircleCheck />
+              </span>
             )}
           </TableCell>
           <TableCell rounded last align="left">
-            <div className="w-full flex items-center gap-x-3">
+            <div className="w-full flex items-center justify-end">
+               <EllipsisVertical size={20} />
+            </div>
+            {/* <div className="w-full flex items-center gap-x-3">
               {user.rutina ? (
               <></>
             ) : (
@@ -63,6 +78,7 @@ export default function ClientesTable() {
               <Trash2 size={20} />
             </Button>
             </div>
+            */}
           </TableCell>
         </TableRow>
       )}

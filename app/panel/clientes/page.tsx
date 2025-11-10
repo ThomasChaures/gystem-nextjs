@@ -27,11 +27,11 @@ export default function ClientesPage() {
       {/* Buscador */}
       <div className="flex items-end mb-4 justify-between">
         <div className="relative">
-          <Search className="absolute top-1/2 transform -translate-y-1/2 left-3 text-gray-500" />
+          <Search className="absolute top-1/2 transform  -translate-y-1/2 left-3 text-gray-500" />
           <input
             type="text"
             placeholder="Busca por nombre o DNI"
-            className="border px-2 pl-10 py-2 w-80 rounded-xl"
+            className="border px-2 bg-white pl-10 py-2 w-80 rounded-xl"
           />
         </div>
 
