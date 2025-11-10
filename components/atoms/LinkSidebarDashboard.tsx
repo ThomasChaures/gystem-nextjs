@@ -28,10 +28,10 @@ const LinkSidebarDashboard = ({
           ${openLayout ? "justify-start px-6 gap-4" : "justify-center px-4"}
           ${
             isActive
-              ? "bg-white text-[#0046FB]"
-              : "text-white hover:bg-white/20"
+              ? "bg-white text-[#333]"
+              : "text-[#333] hover:bg-white/20"
           }
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50
+          focus-visible:outline-none hover:opacity-100 focus-visible:ring-2 focus-visible:ring-white/50
         `}
         aria-current={isActive ? "page" : undefined}
       >
@@ -41,8 +41,8 @@ const LinkSidebarDashboard = ({
           className={`transition-all duration-300
             ${
               isActive
-                ? "stroke-[#0046FB] fill-[#0046FB]"
-                : "stroke-white group-hover:stroke-white"
+                ? "stroke-[#333] fill-[#333]"
+                : "stroke-[#333]  group-hover:opacity-100 opacity-70"
             }
           `}
         />

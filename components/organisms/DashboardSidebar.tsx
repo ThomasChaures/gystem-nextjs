@@ -4,10 +4,10 @@ import {
   Users,
   NotebookText,
   BadgeQuestionMark,
-  GamepadDirectional,
+  Dumbbell,
   LayoutDashboard,
   LogOut,
-  Wallet
+  Wallet,
 } from "lucide-react";
 import LinkSidebarDashboard from "../atoms/LinkSidebarDashboard";
 import useLayout from "@/hooks/useLayout";
@@ -20,7 +20,7 @@ const DashboardSidebar = () => {
       onMouseEnter={() => handleLayout(true)}
       onMouseLeave={() => handleLayout(false)}
       className={`fixed max-md:hidden left-10 top-1/2 -translate-y-1/2 rounded-2xl border border-[#EBEBEA] text-black
-        bg-[#0046FB] backdrop-blur-md shadow-lg overflow-hidden 
+        bg-white backdrop-blur-md overflow-hidden 
         transition-[width,transform,background-color] duration-500 ease-in-out 
         h-[92vh] flex flex-col justify-between
         ${openLayout ? "w-[300px]" : "w-[90px]"}`}
@@ -35,10 +35,10 @@ const DashboardSidebar = () => {
             ${openLayout ? "px-10" : "px-0"}
           `}
         >
-          <GamepadDirectional
+          <Dumbbell
             size={40}
-            fill="white"
-            className="text-white transition-transform duration-500 ease-in-out"
+            fill="#333"
+            className="text-[#333] transition-transform duration-500 ease-in-out"
           />
         </div>
 
@@ -47,7 +47,7 @@ const DashboardSidebar = () => {
           <ul
             className={`${
               openLayout ? "px-10" : ""
-            } w-full items-start space-y-4`}
+            } w-full items-start space-y-8`}
           >
             <LinkSidebarDashboard
               icon={LayoutDashboard}
@@ -80,7 +80,7 @@ const DashboardSidebar = () => {
 
       {/* Contenido inferior */}
       <div>
-        <div className="border-t border-white/20 mx-3 mb-5" />
+        <div className="border-t border-[#333]/20 mx-3 mb-5" />
         <nav className="pb-5 w-full">
           <ul
             className={`${
