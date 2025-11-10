@@ -1,31 +1,31 @@
-import React from "react";
-import type { Cliente } from "@/types/user.types";
+import React, { useEffect, useState } from "react";
 import Card from "../atoms/Card";
 import useClientes from "@/hooks/useClientes";
 import Button from "../atoms/Button";
-import { Plus } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import type { Cliente } from "@/types/user.types";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
-const ClientesSinRutina = () => {
+
+const ClientesAdeudados = () => {
   const { clientes } = useClientes();
 
-  const [sinRutinas, setSinRutinas] = useState<Cliente[]>([]);
+  const [adeudados ,setAdeudados] = useState<Cliente[]>([]);
 
   const filterClientes = () => {
-    const clients = clientes.filter((c) => !c.rutina);
-    setSinRutinas(clients);
-  };
+    const clients = clientes.filter((c) => c.adeudado === true);
+    setAdeudados(clients)
+  }
 
   useEffect(() => {
-    filterClientes();
-  }, [clientes]);
+      filterClientes();
+  }, [clientes])
 
   return (
     <>
       <div className="space-y-2.5">
-        {sinRutinas &&
-          sinRutinas.map((c) => (
+        {adeudados &&
+          adeudados.map((c) => (
             <>
               <Card className="w-full flex p-3! max-sm:p-2! items-center justify-between">
                 <div className="flex items-center gap-x-4">
@@ -42,8 +42,8 @@ const ClientesSinRutina = () => {
                 </div>
 
                 <Button variant="link" className="max-sm:p-2 text-[14px]">
-                  <Plus size={20} />
-                  <span className="max-sm:hidden">Agregar rutina</span>
+                  <MessageCircle size={20} />
+                  <span className="max-sm:hidden">Notificar</span>
                 </Button>
               </Card>
             </>
@@ -53,4 +53,4 @@ const ClientesSinRutina = () => {
   );
 };
 
-export default ClientesSinRutina;
+export default ClientesAdeudados;
