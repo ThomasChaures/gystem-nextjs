@@ -6,12 +6,6 @@ import LastTransactions from "@/components/organisms/LastTransaction";
 import SubGymPrice from "@/components/organisms/SubGymPrice";
 
 export default function Home() {
-  const data = Array.from({ length: 30 }, () =>
-    Math.floor(Math.random() * 100)
-  );
-  const data2 = Array.from({ length: 30 }, () =>
-    Math.floor(Math.random() * 100)
-  );
   return (
     <>
       <section className="w-full">
