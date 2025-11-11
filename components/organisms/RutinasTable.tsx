@@ -8,11 +8,11 @@ import TableCell from "../atoms/TableCell";
 
 const RutinasTable = () => {
   const rutinas = [
-    { id: 1, cliente: "María Gómez", fecha: "2025-11-07" },
-    { id: 2, cliente: "Lucas Fernández", fecha: "2025-11-07" },
-    { id: 3, cliente: "Sofía Martínez", fecha: "2025-11-07" },
-    { id: 4, cliente: "Juan Pérez", fecha: "2025-11-07" },
-    { id: 5, cliente: "Ana López", fecha: "2025-11-07" },
+    { id: 1, nombre: "", cliente: "María Gómez", fecha: "2025-11-07" },
+    { id: 2, nombre: "", cliente: "Lucas Fernández", fecha: "2025-11-07" },
+    { id: 3, nombre: "", cliente: "Sofía Martínez", fecha: "2025-11-07" },
+    { id: 4, nombre: "", cliente: "Juan Pérez", fecha: "2025-11-07" },
+    { id: 5, nombre: "", cliente: "Ana López", fecha: "2025-11-07" },
   ];
   return (
     <>

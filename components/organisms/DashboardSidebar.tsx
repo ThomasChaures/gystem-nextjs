@@ -27,18 +27,35 @@ const DashboardSidebar = () => {
       {/* Contenido superior */}
       <div>
         {/* Logo */}
+        {/* Logo */}
         <div
-          className={`
-            flex items-center justify-center w-full pb-8 mt-16
-            transition-all duration-500 ease-in-out
-            ${openLayout ? "px-10" : "px-0"}
-          `}
+          className={`flex items-center justify-center w-full pb-8 mt-16
+  transition-all duration-500 ease-in-out
+  ${openLayout ? "px-10" : "px-0"}`}
         >
-          <Dumbbell
-            size={40}
-            fill="#333"
-            className="text-[#333] transition-transform duration-500 ease-in-out"
-          />
+          <h1
+            className={`flex items-center font-bold uppercase tracking-wide
+      transition-all duration-500 ease-in-out`}
+          >
+            {/* Letra principal */}
+            <span
+              className={`text-4xl text-black transition-transform duration-500 ${
+                openLayout ? "translate-x-0" : "translate-x-0"
+              }`}
+            >
+              G
+            </span>
+
+            {/* Texto expandido */}
+            <span
+              className={`overflow-hidden transition-all duration-500 ease-in-out
+        font-semibold
+        ${openLayout ? "opacity-100 w-auto text-2xl" : "opacity-0 w-0"}
+      `}
+            >
+              YMSTEM
+            </span>
+          </h1>
         </div>
 
         {/* Navegación principal */}
