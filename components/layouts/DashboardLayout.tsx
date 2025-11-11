@@ -1,25 +1,20 @@
 "use client";
 
 import { ReactNode } from "react";
-import useLayout from "@/hooks/useLayout";
-import DashboardSidebar from "../organisms/DashboardSidebar";
 import HeaderDashboard from "../organisms/HeaderDashboard";
-import DashboardSidebarMobile from "../organisms/DashboardSidebarMobile";
+import Sidebar from "../organisms/navigations/Sidebar";
 
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
-  const { openLayout } = useLayout();
 
   return (
     <>
-      <DashboardSidebar />
-      <DashboardSidebarMobile />
+      <Sidebar />
       <HeaderDashboard />
       <main
         className={`
-          bg-[#FAFAFA] h-screen rounded-xl p-6 md:p-10 max-md:mt-10 transition-[margin,width] duration-500 ease-in-out
-          ${openLayout ? "md:ml-[350px] md:w-[calc(100%-360px)]" : "md:ml-[130px] md:w-[calc(100%-140px)]"}
-        `}
+          bg-[#F4F4F6] h-screen rounded-xl p-6  md:p-10 max-md:mt-10 transition-[margin,width] duration-500 ease-in-out md:ml-[280px] md:w-[calc(100%-280px)]`}
+        
       >
         {children}
       </main>

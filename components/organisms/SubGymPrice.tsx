@@ -6,7 +6,7 @@ const SubGymPrice = () => {
     <div className="w-full h-full flex flex-col">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-semibold text-[17px] sm:text-lg text-gray-800">
+        <h2 className="font-semibold text-xl sm:text-lg text-gray-800">
           Planes
         </h2>
 

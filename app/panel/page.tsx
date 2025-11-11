@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <>
       <section className="w-full">
-        <h1 className="text-3xl mt-8 mb-8 font-semibold">Panel</h1>
+        <h1 className="text-3xl mb-8 font-semibold">Panel</h1>
 
-        <div className="flex max-lg:flex-col gap-4 items-center gap-x-4 mb-4 w-full justify-between">
-          <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 justify-between w-full">
-            <Card className="w-full flex  justify-between items-center h-40">
+        <div className="flex  max-lg:flex-col gap-4 items-center gap-x-4 mb-4 w-full justify-between">
+          <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 h-full justify-between w-full">
+            <Card className=" flex  justify-between items-center h-40">
               {/* Título */}
               <div className="w-full">
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
@@ -86,13 +86,11 @@ export default function Home() {
 
         <div className="flex-col  mt-8">
           <div className="w-full mb-8  max-xl:flex-col flex items-center gap-6">
-
             <Card className="h-105 xl:max-w-[600px]">
               <MonthlyChart />
             </Card>
-            <Card className="h-105 w-full">
-              <LastTransactions />
-            </Card>
+
+            <LastTransactions />
           </div>
           <div className=" w-full">
             <Card className="h-full">

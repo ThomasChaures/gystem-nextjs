@@ -11,7 +11,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
-import LinkSidebarDashboard from "../atoms/LinkSidebarDashboard";
+import LinkSidebarDashboard from "../../atoms/LinkSidebarDashboard";
 
 export default function DashboardSidebarMobile() {
   const [open, setOpen] = useState(false);
