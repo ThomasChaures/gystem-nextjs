@@ -67,7 +67,7 @@ export default function Home() {
           <ul className="space-y-1.5 max-md:space-y-5 text-gray-700">
             {circuit.items.map((item, j) => (
               <li key={j} className="flex items-start gap-x-2">
-                <span className="shrink-0 w-2 h-2 mt-2 bg-amber-400 rounded-full"></span>
+                <span className="shrink-0 w-2 h-2 mt-2 bg-black rounded-full"></span>
                 <span className="leading-snug">{item}</span>
               </li>
             ))}

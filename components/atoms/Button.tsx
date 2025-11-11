@@ -18,14 +18,14 @@ export default function Button({
   href = "",
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-md font-medium text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-300";
+    "inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-md font-medium text-white transition duration-200 focus:outline-none focus:ring-2 ";
 
   if (variant === "link") {
     return (
       <Link
         href={href || "#"}
         onClick={onClick}
-        className={`${baseStyles} bg-[#0046FB]/90 hover:bg-[#0046FB] ${className}`}
+        className={`${baseStyles} bg-black/90 hover:bg-black ${className}`}
       >
         {children}
       </Link>
@@ -35,7 +35,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} bg-[#0046FB]/90 hover:bg-[#0046FB] ${className}`}
+      className={`${baseStyles}  bg-black/90 hover:bg-black ${className}`}
     >
       {children}
     </button>

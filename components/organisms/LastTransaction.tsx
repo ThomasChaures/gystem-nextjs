@@ -29,11 +29,11 @@ export default function LastTransactions() {
   ];
 
   return (
-    <div className=" rounded-3xl  w-full  flex flex-col justify-between h-full">
+    <div className="rounded-3xl w-full flex flex-col justify-between h-full">
       {/* Header */}
       <div className="flex w-full justify-between items-center mb-4">
-        <h2 className=" font-semibold ">Últimas transacciones</h2>
-        <button className="text-amber-500 text-sm font-medium hover:underline">
+        <h2 className="font-semibold text-gray-800">Últimas transacciones</h2>
+        <button className="bg-black px-2 py-1 rounded-full  text-sm font-base text-white">
           Ver todas
         </button>
       </div>
@@ -50,8 +50,8 @@ export default function LastTransactions() {
               <div
                 className={`w-8 h-8 flex items-center justify-center rounded-xl ${
                   t.type === "income"
-                    ? "bg-amber-50 text-amber-500"
-                    : "bg-red-50 text-red-500"
+                    ? "bg-blue-50 text-blue-600"
+                    : "bg-red-50 text-red-600"
                 }`}
               >
                 {t.type === "income" ? (
@@ -75,7 +75,7 @@ export default function LastTransactions() {
             {/* Monto */}
             <p
               className={`text-[15px] font-semibold ${
-                t.type === "income" ? "text-green-600" : "text-red-500"
+                t.type === "income" ? "text-green-600" : "text-red-600"
               }`}
             >
               {t.type === "income"

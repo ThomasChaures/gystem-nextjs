@@ -1,10 +1,9 @@
 "use client";
-import { IconTreadmill } from "@tabler/icons-react";
 import {
   Users,
   NotebookText,
   BadgeQuestionMark,
-  GamepadDirectional,
+  Dumbbell,
   LayoutDashboard,
   LogOut,
   Wallet,
@@ -45,7 +44,11 @@ export default function DashboardSidebarMobile() {
         {/* Encabezado */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-x-3">
-            <GamepadDirectional size={36} fill="#333" className="text-[#333]" />
+             <Dumbbell
+            size={36}
+            fill="#333"
+            className="text-[#333] transition-transform duration-500 ease-in-out"
+          />
             <h2 className="text-lg font-semibold text-gray-800">Gymstem</h2>
           </div>
           <button
@@ -68,11 +71,6 @@ export default function DashboardSidebarMobile() {
               icon={Users}
               route="/panel/clientes"
               name="Clientes"
-            />
-            <LinkSidebarDashboard
-              icon={IconTreadmill}
-              route="/panel/ejercicios"
-              name="Ejercicios"
             />
             <LinkSidebarDashboard
               icon={NotebookText}

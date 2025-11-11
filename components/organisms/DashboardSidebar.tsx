@@ -1,5 +1,4 @@
 "use client";
-import { IconTreadmill } from "@tabler/icons-react";
 import {
   Users,
   NotebookText,
@@ -58,11 +57,6 @@ const DashboardSidebar = () => {
               icon={Users}
               route="/panel/clientes"
               name="Clientes"
-            />
-            <LinkSidebarDashboard
-              icon={IconTreadmill}
-              route="/panel/ejercicios"
-              name="Ejercicios"
             />
             <LinkSidebarDashboard
               icon={NotebookText}
