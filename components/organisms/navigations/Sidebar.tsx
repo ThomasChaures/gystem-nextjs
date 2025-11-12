@@ -11,14 +11,14 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <aside className="bg-[#FFFFFE] border-[#d1d1d1]/50  border-r flex flex-col justify-between p-7 px-10 w-[290px] fixed h-screen">
+    <aside className="bg-[#FFFFFE] flex flex-col border-[#d1d1d1] border-r justify-between p-7 px-10 w-[290px] fixed h-screen">
       {/* Title */}
 
       {/* Navigation */}
       <div className="">
-        <div className="pb-5 flex items-center gap-x-2.5 mb-9 text-3xl  ">
-          <Image alt="Logo" src={"logo.svg"} height={60} width={60} />
-          <h1 className="font-semibold font-mono">Gymstem</h1>
+        <div className="pb-5 flex items-center pt-1.5 gap-x-2.5 mb-9 text-xl  ">
+          <Image alt="Logo" src={"logo.svg"} height={40} width={40} />
+          <h1 className="font-semibold font-mono uppercase">Gymstem</h1>
         </div>
         <p className="text-[#c0c0c0] mb-5 text-sm uppercase tracking-[2px]">
           Menu Principal

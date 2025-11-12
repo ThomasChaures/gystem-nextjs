@@ -31,9 +31,9 @@ export default function TableCell({
     <td
       className={`
         p-3 py-5 bg-white ${alignment} ${radius} ${className}
-        ${first ? "border border-gray-300 border-r-0" : ""}
-        ${last ? "border border-gray-300 border-l-0" : ""}
-        ${!first && !last ? "border-y border-gray-300" : ""}
+        ${first ? "" : ""}
+        ${last ? "" : ""}
+        ${!first && !last ? "" : ""}
       `}
     >
       {children}

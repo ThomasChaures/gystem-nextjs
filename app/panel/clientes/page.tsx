@@ -31,7 +31,7 @@ export default function ClientesPage() {
           <input
             type="text"
             placeholder="Busca por nombre o DNI"
-            className="border px-2 bg-white pl-10 py-2 w-80 rounded-xl"
+            className="border border-[#d1d1d1] pl-11 px-2 bg-white py-2 w-80 rounded-xl"
           />
         </div>
 

@@ -14,7 +14,6 @@ export default function Home() {
         <div className="flex  max-lg:flex-col gap-4 items-center gap-x-4 mb-4 w-full justify-between">
           <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 h-full justify-between w-full">
             <Card className=" flex  justify-between items-center h-40">
-              {/* Título */}
               <div className="w-full">
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Clientes actuales
@@ -26,11 +25,8 @@ export default function Home() {
                   </span>
                 </p>
               </div>
-
-              {/* Línea inferior o descripción opcional */}
             </Card>
             <Card className="w-full flex  justify-between items-center h-40">
-              {/* Título */}
               <div>
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Clientes nuevos
@@ -42,15 +38,10 @@ export default function Home() {
                   </span>
                 </p>
               </div>
-
-              {/* Métrica principal */}
-
-              {/* Línea inferior o descripción opcional */}
             </Card>
           </div>
           <div className="flex max-sm:flex-col gap-4 items-center gap-x-4 justify-between w-full">
             <Card className="w-full flex  justify-between items-center h-40">
-              {/* Título */}
               <div>
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Rutinas
@@ -60,13 +51,8 @@ export default function Home() {
                   <span className="text-lg text-gray-500 font-normal ml-1"></span>
                 </p>
               </div>
-
-              {/* Métrica principal */}
-
-              {/* Línea inferior o descripción opcional */}
             </Card>
             <Card className="w-full flex  justify-between items-center h-40">
-              {/* Título */}
               <div>
                 <p className="text-sm mb-8 text-gray-500 font-semibold">
                   Ingresos de este mes
@@ -76,10 +62,6 @@ export default function Home() {
                   <span className="text-lg text-gray-500 font-normal ml-1"></span>
                 </p>
               </div>
-
-              {/* Métrica principal */}
-
-              {/* Línea inferior o descripción opcional */}
             </Card>
           </div>
         </div>
@@ -92,16 +74,18 @@ export default function Home() {
 
             <LastTransactions />
           </div>
-          <div className=" w-full">
+          {/* <div className=" w-full">
             <Card className="h-full">
               <SubGymPrice />
             </Card>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <section className="mt-8">
-        <ClientesDashboard />
+      <section className="mt-8 pb-8">
+        <Card className="">
+          <ClientesDashboard />
+        </Card>
       </section>
     </>
   );

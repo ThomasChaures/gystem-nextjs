@@ -34,7 +34,7 @@ export default function DropdownFilter({
 
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between border px-4 py-2 rounded-xl w-48 bg-white text-gray-700 hover:bg-gray-50 transition"
+        className="flex items-center justify-between border border-[#d1d1d1] px-4 py-2 rounded-xl w-48 bg-white text-gray-700 hover:bg-gray-50 transition"
       >
         {selected}
         <ChevronDown
@@ -45,7 +45,7 @@ export default function DropdownFilter({
       </button>
 
       {open && (
-        <ul className="absolute mt-1 w-48 bg-white border rounded-xl shadow-lg z-10 overflow-hidden">
+        <ul className="absolute mt-1 w-48 bg-white border border-[#d1d1d1] rounded-xl shadow-lg z-10 overflow-hidden">
           {options.map((option) => (
             <li
               key={option}

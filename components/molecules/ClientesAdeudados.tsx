@@ -14,7 +14,7 @@ const ClientesAdeudados = ({ data }: { data: Cliente[] }) => {
             <>
               <Card
                 key={c.id}
-                className="w-full flex p-3! max-sm:p-2! items-center justify-between"
+                className="w-full flex p-0! py-5! border-[#d1d1d1]/30 rounded-none border-b! max-sm:p-2! items-center justify-between"
               >
                 <div className="flex items-center gap-x-4">
                   <div className=" h-10 w-10 rounded-xl flex items-center justify-center">
