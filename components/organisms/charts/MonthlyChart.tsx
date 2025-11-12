@@ -30,7 +30,7 @@ const MonthlyChart = () => {
   const maxValue = Math.max(...displayedData.map((d) => d.value));
 
   return (
-    <div className="font-sans xl:max-w-[600px] w-full">
+    <div className="font-sans max-w-[1530px] max-[1530px]:max-w-full w-full">
       <div className="mb-14">
         <h3 className="mb-2 font-semibold">Ingresos Mensuales</h3>
         <h2 className="text-3xl font-semibold text-[#111] mb-6">

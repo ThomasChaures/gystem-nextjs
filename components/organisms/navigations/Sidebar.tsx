@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <aside className="bg-[#FFFFFE] flex flex-col border-[#d1d1d1] border-r justify-between p-7 px-10 w-[290px] fixed h-screen">
+    <aside className="bg-[#FFFFFE] max-lg:hidden flex flex-col border-[#d1d1d1] border-r justify-between p-7 px-10 w-[290px] fixed h-screen">
       {/* Title */}
 
       {/* Navigation */}

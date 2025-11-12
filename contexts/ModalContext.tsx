@@ -1,5 +1,6 @@
+"use client";
 import { createContext, useState, type ReactNode } from "react";
-
+import ModalTemplate from "@/components/molecules/ModalTemplate";
 interface ModalContextType {
   openModal: (
     title: string,
@@ -54,7 +55,13 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
     <ModalContext.Provider value={{ openModal, closeModal, setIsOpen, isOpen }}>
       {children}
 
-      {isOpen && <></>}
+      {isOpen && (
+        <>
+          <ModalTemplate title={title} onClose={closeModal} width={modalWidth}>
+            {content}
+          </ModalTemplate>
+        </>
+      )}
     </ModalContext.Provider>
   );
 };
