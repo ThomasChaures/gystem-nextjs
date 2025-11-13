@@ -8,6 +8,7 @@ import DropdownFilter from "@/components/atoms/DropdownFilter";
 
 export default function ClientesPage() {
   const [selectedRoutine, setSelectedRoutine] = useState("Todos");
+  const [selectedGym, setSelectedGym] = useState("Todos");
   const [selectedStatus, setSelectedStatus] = useState("Todos");
 
   return (
@@ -31,7 +32,7 @@ export default function ClientesPage() {
           <input
             type="text"
             placeholder="Busca por nombre o DNI"
-            className="border px-2 bg-white pl-10 py-2 w-80 rounded-xl"
+            className="border border-[#d1d1d1] pl-11 px-2 bg-white py-2 w-80 rounded-xl"
           />
         </div>
 
@@ -45,9 +46,15 @@ export default function ClientesPage() {
           />
           <DropdownFilter
             label="Estado"
-            options={["Todos", "Al día", "Adeudado"]}
+            options={["Todos", "Al día", "Adeudado", "Inactivo"]}
             selected={selectedStatus}
             onChange={setSelectedStatus}
+          />
+           <DropdownFilter
+            label="Sedes"
+            options={["Todos", "SkyGym", "SkyGym 44"]}
+            selected={selectedGym}
+            onChange={setSelectedGym}
           />
         </div>
       </div>

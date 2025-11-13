@@ -11,10 +11,10 @@ const Toogle: React.FC<ToggleProps> = ({ name, click, active }) => {
     <span
       onClick={click}
       className={`
-        px-3 py-1.5 rounded-full hover:bg-[#333]   border text-sm font-medium cursor-pointer transition-all duration-200
+        px-3 py-1.5 rounded-lg hover:bg-[#333] border text-sm  cursor-pointer transition-all duration-200
         ${active
           ? "bg-[#333] text-white border-[#333]"
-          : "border-gray-300 text-gray-700 hover:bg-gray-50"}
+          : "bg-gray-300/20 border-transparent   hover:bg-gray-50"}
       `}
     >
       {name}

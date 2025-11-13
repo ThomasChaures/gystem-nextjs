@@ -20,7 +20,7 @@ export default function Table<T>({
       {/* 👇 Cambiamos a table-fixed y border-collapse para evitar espacios raros */}
       <table className="w-full table-fixed border-collaps  border-separate border-spacing-y-3">
         <thead>
-          <tr className="bg-gray-300/10 border-gray-400/20 border text-[#333]">
+          <tr className="bg-[#000201] text-white border-gray-400/20 border ">
             {headers.map((header, i) => (
               <th
                 key={header}
