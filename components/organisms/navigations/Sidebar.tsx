@@ -5,6 +5,7 @@ import {
   IconClipboardTextFilled,
   IconSettingsFilled,
   IconLayoutBoardFilled,
+  IconBriefcaseFilled,
 } from "@tabler/icons-react";
 import LinkSidebar2 from "@/components/atoms/LinkSidebar2";
 import Image from "next/image";
@@ -16,7 +17,7 @@ const Sidebar = () => {
 
       {/* Navigation */}
       <div className="">
-        <div className="pb-5 flex items-center pt-1.5 gap-x-2.5 mb-9 text-xl  ">
+        <div className="pb-5 flex items-center pt-1.5 gap-x-2.5 mb-4 text-xl  ">
           <Image alt="Logo" src={"logo.svg"} height={40} width={40} />
           <h1 className="font-semibold font-mono uppercase">Gymstem</h1>
         </div>
@@ -29,6 +30,11 @@ const Sidebar = () => {
               icon={IconLayoutBoardFilled}
               route="/panel"
               name="Panel"
+            />
+            <LinkSidebar2
+              icon={IconBriefcaseFilled}
+              route="/panel/empleados"
+              name="Empleados"
             />
             <LinkSidebar2
               icon={UsersRound}

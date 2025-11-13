@@ -1,6 +1,43 @@
 import Image from "next/image";
-import { Search, Bell } from "lucide-react";
+import { Search, Bell, Pen } from "lucide-react";
+import { useModal } from "@/hooks/useModal";
 const HeaderDashboard = () => {
+  const { openModal } = useModal();
+
+  const handleOpenAccountConfig = () => {
+    openModal(
+      "Account",
+      <>
+        <div className="py-10 w-full">
+          <div className="flex pb-10 border-b border-[#d1d1d1] items-start justify-between gap-x-4">
+            <div className="flex gap-x-4 items-center">
+              <div className="h-20 w-20 bg-gray-300/20 overflow-hidden  rounded-xl flex items-center justify-center">
+                <Image
+                  src={"/users/user-admin.jpg"}
+                  alt="user logo"
+                  width={90}
+                  height={90}
+                />
+              </div>
+              <div>
+                <p className="font-medium text-2xl ">Thomas Chaures</p>
+                <span className="font-sans text-xl opacity-60">Manager</span>
+              </div>
+            </div>
+            <div>
+              <Pen fill="black" size={20} />
+            </div>
+          </div>
+          <div className="py-10 flex flex-col gap-y-4 w-full">
+             <label htmlFor="">Nombre</label> 
+             <input className="bg-gray-300/20 p-4 border border-[#d1d1d1] block rounded-lg w-full" type="text" name="" id="" value={'Thomas Chaures'} />
+              <label htmlFor="">Email</label> 
+             <input className="bg-gray-300/20 p-4 border border-[#d1d1d1] block rounded-lg w-full" type="text" name="" id="" value={'chauresgym@gmail.com'} />
+          </div>
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <div
@@ -23,18 +60,25 @@ const HeaderDashboard = () => {
             <Bell color="#000201" />
           </div>
 
+          <div className="h-full w-[2.5px] opacity-30 bg-[#d1d1d1] block"></div>
 
-        <div className="h-full w-[2.5px] opacity-30 bg-[#d1d1d1] block">
-
-        </div>
-
-          <div className="flex items-center gap-x-2.5">
-            <div className="h-12 w-12 bg-gray-300/20 overflow-hidden  rounded-xl flex items-center justify-center">
-            <Image src={'/users/user-admin.jpg'} alt="user logo" width={60} height={60} />
-          </div>
+          <div
+            onClick={handleOpenAccountConfig}
+            className="flex hover:bg-gray-300/20 px-2 transition-all py-1 rounded-lg items-center gap-x-2.5"
+          >
+            <div className="h-11 w-11 bg-gray-300/20 overflow-hidden  rounded-xl flex items-center justify-center">
+              <Image
+                src={"/users/user-admin.jpg"}
+                alt="user logo"
+                width={60}
+                height={60}
+              />
+            </div>
             <div>
               <p className="font-medium ">Thomas Chaures</p>
-              <span className="font-sans font-medium text-sm opacity-60">Manager</span>
+              <span className="font-sans font-medium text-sm opacity-60">
+                Manager
+              </span>
             </div>
           </div>
         </div>

@@ -11,8 +11,8 @@ const ClientesDashboard = () => {
   );
 
   const { clientes } = useClientes();
-  const adeudados = clientes.filter((c) => c.adeudado);
-  const sinRutina = clientes.filter((c) => !c.rutina);
+  const adeudados = clientes.filter((c) => c.status === "overdue");
+  const sinRutina = clientes.filter((c) => !c.has_routine);
 
   return (
     <div className="w-full pb-8">

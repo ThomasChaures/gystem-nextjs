@@ -21,7 +21,7 @@ export default function Home() {
 
     const handleClientesNuevos = () => {
     openModal(
-      "Clientes Nuevos",
+      "Clientes nuevos",
       <>
         <div className="w-full"></div>
       </>

@@ -25,14 +25,14 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [onCloseCallback, setOnCloseCallback] = useState<(() => void) | null>(
     null
   );
-  const [modalWidth, setModalWidth] = useState<string>("max-w-[500px]");
+  const [modalWidth, setModalWidth] = useState<string>("max-w-[600px]");
   const [title, setTitle] = useState<string>("");
 
   const openModal = (
     modalTitle: string,
     modalContent: ReactNode,
     callback?: () => void,
-    width: string = "max-w-[500px]"
+    width: string = "max-w-[600px]"
   ) => {
     setTitle(modalTitle);
     setContent(modalContent);

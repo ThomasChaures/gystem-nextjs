@@ -14,6 +14,7 @@ import {
   CircleCheck,
   EllipsisVertical,
 } from "lucide-react";
+import { IconCircleXFilled } from "@tabler/icons-react";
 
 const users = [
   {
@@ -36,30 +37,42 @@ export default function ClientesTable() {
   const { clientes } = useClientes();
   return (
     <Table
-      headers={["Nombre", "DNI", "Rutina", "Estado", ""]}
+      headers={["Nombre", "DNI", "Telefono", "Rutina", "Estado", "Sede", ""]}
       data={clientes}
       renderRow={(user) => (
         <TableRow key={user.id}>
-          <TableCell first>
-            {user.nombre} {user.apellido}
-          </TableCell>
+          <TableCell first>{user.name}</TableCell>
           <TableCell>{user.dni}</TableCell>
-          <TableCell>{user.rutina ? <CircleCheck /> : <CircleX />}</TableCell>
+          <TableCell>{user.phone}</TableCell>
           <TableCell>
-            {user.adeudado ? (
-              <span className="text-red-600 font-medium">
-                <CircleX />
-              </span>
+            {user.has_routine ? (
+              <CircleCheck />
             ) : (
-              <span className="text-green-600 font-medium">
-                <CircleCheck />
-              </span>
+              <IconCircleXFilled color="red" />
             )}
           </TableCell>
+          <TableCell>
+            {user.status === "active" && (
+              <span className="text-green-600 font-medium">Activo</span>
+            )}
+
+            {user.status === "inactive" && (
+              <span className="text-gray-500 font-medium">Inactivo</span>
+            )}
+
+            {user.status === "overdue" && (
+              <span className="text-red-600 font-medium">Adeudado</span>
+            )}
+          </TableCell>
+
+          <TableCell>
+            {user.gym}
+          </TableCell>
+
           <TableCell last align="left">
             <div className="w-full flex items-center justify-end">
               <div className="h-10 w-10 bg-gray-300/20 rounded-xl flex items-center justify-center">
-                 <EllipsisVertical size={20} />
+                <EllipsisVertical size={20} />
               </div>
             </div>
             {/* <div className="w-full flex items-center gap-x-3">

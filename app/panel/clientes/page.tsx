@@ -8,6 +8,7 @@ import DropdownFilter from "@/components/atoms/DropdownFilter";
 
 export default function ClientesPage() {
   const [selectedRoutine, setSelectedRoutine] = useState("Todos");
+  const [selectedGym, setSelectedGym] = useState("Todos");
   const [selectedStatus, setSelectedStatus] = useState("Todos");
 
   return (
@@ -45,9 +46,15 @@ export default function ClientesPage() {
           />
           <DropdownFilter
             label="Estado"
-            options={["Todos", "Al día", "Adeudado"]}
+            options={["Todos", "Al día", "Adeudado", "Inactivo"]}
             selected={selectedStatus}
             onChange={setSelectedStatus}
+          />
+           <DropdownFilter
+            label="Sedes"
+            options={["Todos", "SkyGym", "SkyGym 44"]}
+            selected={selectedGym}
+            onChange={setSelectedGym}
           />
         </div>
       </div>
