@@ -44,7 +44,7 @@ const ModalTemplate: React.FC<props> = ({
               onClick={onClose}
               className="w-full flex items-center justify-between"
             >
-              <p className="inter-semibold text-xl">{title}</p>
+              <p className="font-semibold text-xl">{title}</p>
               <X className="cursor-pointer" strokeWidth={1.5} size={22} />
             </div>
             <div>{children}</div>

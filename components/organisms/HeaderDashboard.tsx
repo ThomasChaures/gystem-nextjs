@@ -6,7 +6,7 @@ const HeaderDashboard = () => {
 
   const handleOpenAccountConfig = () => {
     openModal(
-      "Account",
+      "Cuenta",
       <>
         <div className="py-10 w-full">
           <div className="flex pb-10 border-b border-[#d1d1d1] items-start justify-between gap-x-4">
