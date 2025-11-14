@@ -1,4 +1,4 @@
-import { UsersRound, LogOut } from "lucide-react";
+import { UsersRound, LogOut, Map } from "lucide-react";
 
 import {
   IconCreditCardFilled,
@@ -58,7 +58,12 @@ const Sidebar = () => {
             Sedes
           </p>
 
-          <ul>
+          <ul className="space-y-4 my-4">
+            <LinkSidebar2
+              icon={Map}
+              route="/panel/mapa"
+              name="Mapa"
+            />
             <li className="text-sm flex items-center gap-x-3 px-3 py-3">
               <span className="block bg-blue-600 rounded-full p-1"></span>SkyGym
             </li>

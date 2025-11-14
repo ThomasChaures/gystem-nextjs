@@ -27,7 +27,7 @@ const ClientesDashboard = () => {
         />
       </div>
 
-      <div className="w-full pt-6">
+      <div className="w-full">
         {selected === "Sin rutina" ? (
           <ClientesSinRutina data={sinRutina} />
         ) : (
