@@ -21,7 +21,7 @@ const Sidebar = () => {
           <Image alt="Logo" src={"logo.svg"} height={40} width={40} />
           <h1 className="font-semibold font-mono uppercase">Gymstem</h1>
         </div>
-        <p className="text-[#c0c0c0] mb-5 text-sm uppercase tracking-[2px]">
+        <p className="text-[#c0c0c0] mb-5 text-sm uppercase tracking-[2px]"> 
           Menu Principal
         </p>
         <nav>
