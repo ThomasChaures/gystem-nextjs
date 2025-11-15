@@ -62,7 +62,7 @@ const Sidebar = () => {
             <LinkSidebar2
               icon={Map}
               route="/panel/mapa"
-              name="Mapa"
+              name="Editor de plano"
             />
             <li className="text-sm flex items-center gap-x-3 px-3 py-3">
               <span className="block bg-blue-600 rounded-full p-1"></span>SkyGym

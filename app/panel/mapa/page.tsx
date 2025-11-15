@@ -183,7 +183,7 @@ const Page = () => {
   const handleObject = () => {
     setMode("placingObject");
     setPendingObject({
-      type: "bench",
+      type: "machine",
       width: 40,
       height: 40,
       icon: "dumbell",
@@ -457,13 +457,13 @@ const Page = () => {
 
       <Card className="absolute w-auto! left-1/2 -translate-x-1/2 p-2! transform border bottom-5">
         <ul className="flex items-center gap-x-3">
-          <li onClick={handleZone}>
+          <li onClick={handleZone} className={`hover:bg-gray-300/50 ${pendingObject?.type === 'zone' && "bg-gray-300/50"}  p-2 rounded-lg`}>
             <IconCube />
           </li>
-          <li onClick={handleObject}>
+          <li onClick={handleObject} className={`hover:bg-gray-300/50 ${pendingObject?.type === 'machine' && "bg-gray-300/50"}  p-2 rounded-lg`}>
             <Dumbbell fill="black" />
           </li>
-          <li onClick={handleObject}>
+          <li onClick={handleObject} className="hover:bg-gray-300/50 p-2 rounded-lg">
             <CircleDashed fill="black" />
           </li>
         </ul>
